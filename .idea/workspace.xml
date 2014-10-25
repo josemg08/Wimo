@@ -13,7 +13,7 @@
     </shared>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/example/Wimo/home.java" line="40" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/example/Wimo/home.java" line="43" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67419740-6035-4553-a995-3adb9e071902" name="Default" comment="" />
@@ -70,6 +70,68 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/Wimo/home.java" line="83" class="com.example.Wimo.home" package="com.example.Wimo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/Wimo/home.java" line="59" class="com.example.Wimo.home" package="com.example.Wimo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/Wimo/home.java" line="49" class="com.example.Wimo.home" package="com.example.Wimo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/Wimo/home.java" line="28" class="com.example.Wimo.home" package="com.example.Wimo">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -82,8 +144,10 @@
       <file leaf-file-name="WimoApp.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="4" selection-start="454" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="129" max-vertical-offset="544">
-              <folding />
+            <state line="19" column="38" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="561">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,7 +158,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="70" selection-start="2317" selection-end="2318" vertical-scroll-proportion="-11.56" vertical-offset="561" max-vertical-offset="1275">
+            <state line="37" column="7" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.16" vertical-offset="633" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
@@ -112,7 +176,7 @@
       <file leaf-file-name="home.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="56" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.25822785" vertical-offset="612" max-vertical-offset="1649">
+            <state line="59" column="64" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.27659574" vertical-offset="759" max-vertical-offset="1785">
               <folding>
                 <element signature="docComment;class#home#0" expanded="false" />
               </folding>
@@ -201,12 +265,12 @@
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/Wimo/tutorial.java" />
         <option value="$PROJECT_DIR$/res/layout/tutorial.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java" />
         <option value="$PROJECT_DIR$/src/com/example/Wimo/login.java" />
         <option value="$PROJECT_DIR$/res/layout/login.xml" />
         <option value="$PROJECT_DIR$/res/anim/anim.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/home.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java" />
         <option value="$PROJECT_DIR$/src/com/example/Wimo/home.java" />
       </list>
     </option>
@@ -823,16 +887,16 @@
       <workItem from="1414175530144" duration="6896000" />
       <workItem from="1414183758746" duration="3203000" />
       <workItem from="1414218410456" duration="11654000" />
-      <workItem from="1414235012722" duration="9327000" />
+      <workItem from="1414235012722" duration="18260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31080000" />
+    <option name="totallyTimeSpent" value="40013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -852,10 +916,10 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796207" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29392973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29392973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -920,7 +984,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="4" selection-start="454" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="129" max-vertical-offset="544">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,7 +1073,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,7 +1102,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="38" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,13 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="4" selection-start="454" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="129" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="527">
@@ -1131,14 +1194,23 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="70" selection-start="2317" selection-end="2318" vertical-scroll-proportion="-11.56" vertical-offset="561" max-vertical-offset="1275">
+        <state line="37" column="7" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.16" vertical-offset="633" max-vertical-offset="1377">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/WimoApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="38" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="561">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Wimo/home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="56" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.25822785" vertical-offset="612" max-vertical-offset="1649">
+        <state line="59" column="64" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.27659574" vertical-offset="759" max-vertical-offset="1785">
           <folding>
             <element signature="docComment;class#home#0" expanded="false" />
           </folding>

@@ -30,7 +30,8 @@ public class home extends Activity implements LocationListener {
         setContentView(R.layout.home);
 
         SharedPreferences settings = getSharedPreferences(TOTAL_KILOMETERS, 0);
-        totalDistanceMeters = settings.getInt("total", 0);
+        totalDistanceMeters = settings.getInt("total_meters", 0);
+        totalDistanceKilometers = settings.getInt("total_km", 0);
 
         kilometers_count = (TextView) findViewById(R.id.kilometers);
         meters_count = (TextView) findViewById(R.id.meters);
@@ -38,20 +39,25 @@ public class home extends Activity implements LocationListener {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 3000, 10, this);
 
-        kilometers_count.setText(""+(int) totalDistanceMeters);
+        extrapolateKilometers();
+
+        kilometers_count.setText(""+ totalDistanceKilometers+".");
+        meters_count.setText(""+(int) totalDistanceMeters);
     }
 
     //TODO check this algorithm
     private void extrapolateKilometers(){
-        if(actualDistanceMeters > 990){
-            actualDistanceKilometers ++;
-            kilometers_count.setText(""+actualDistanceKilometers);
-            actualDistanceMeters = 0;
+        if(totalDistanceMeters > 990){
+            while(totalDistanceMeters >990){
+                totalDistanceKilometers ++;
+                totalDistanceMeters -= 990;
+            }
+            kilometers_count.setText(""+totalDistanceKilometers+".");
+            totalDistanceMeters = 0;
+            meters_count.setText("0");
         }
         else{
-            meters_count.setText(""+actualDistanceMeters);
-
-
+            meters_count.setText(""+((int)(totalDistanceMeters/10)));
         }
     }
 
@@ -61,7 +67,8 @@ public class home extends Activity implements LocationListener {
 
         SharedPreferences settings = getSharedPreferences(TOTAL_KILOMETERS, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putInt("total", (int) totalDistanceMeters);
+        editor.putInt("total_meters", (int) totalDistanceMeters);
+        editor.putInt("total_km", totalDistanceKilometers);
 
         editor.commit();
     }
@@ -77,7 +84,8 @@ public class home extends Activity implements LocationListener {
             actualDistanceMeters = location.distanceTo(lastLocation);
             totalDistanceMeters += actualDistanceMeters;
             lastLocation = location;
-            kilometers_count.setText(""+(int) totalDistanceMeters);
+            extrapolateKilometers();
+            kilometers_count.setText(""+totalDistanceKilometers+".");
         }
 
         //kilometers.setText(totalDistanceMeters);
