@@ -9,12 +9,12 @@ import android.view.View;
  * Created by JoseMaria on 24/10/14.
  */
 
-public class login extends Activity {
+public class Activitylogin extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
     }
 
     public void jumpToHome(View view){
