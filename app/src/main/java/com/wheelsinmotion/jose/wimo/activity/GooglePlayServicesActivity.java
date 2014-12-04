@@ -1,4 +1,4 @@
-package com.wheelsinmotion.jose.wimo;
+package com.wheelsinmotion.jose.wimo.activity;
 
 import android.app.Activity;
 import android.content.DialogInterface;

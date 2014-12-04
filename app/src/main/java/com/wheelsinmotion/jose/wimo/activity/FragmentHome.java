@@ -1,4 +1,4 @@
-package com.wheelsinmotion.jose.wimo;
+package com.wheelsinmotion.jose.wimo.activity;
 
 import android.content.SharedPreferences;
 import android.location.Location;
@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.wheelsinmotion.jose.wimo.R;
 
 /**
  * Created by jose on 12/3/14.

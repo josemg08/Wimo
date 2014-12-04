@@ -1,4 +1,4 @@
-package com.wheelsinmotion.jose.wimo;
+package com.wheelsinmotion.jose.wimo.activity;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -6,6 +6,9 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+
+import com.wheelsinmotion.jose.wimo.R;
+import com.wheelsinmotion.jose.wimo.util.TabPagerAdapter;
 
 /**
  * Created by JoseMaria on 25/10/14.
@@ -30,8 +33,10 @@ public class home extends FragmentActivity implements
         mAdapter = new TabPagerAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(mAdapter);
-        actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        actionBar.setHomeButtonEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
 
         // Adding Tabs
         for (String tab_name : tabs) {
