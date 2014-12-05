@@ -1,36 +1,71 @@
 package com.wheelsinmotion.jose.wimo.activity;
 
+import android.support.v4.app.ListFragment;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.wheelsinmotion.jose.wimo.R;
 import com.wheelsinmotion.jose.wimo.model.Badge;
+import com.wheelsinmotion.jose.wimo.util.BadgesListAdapter;
 import com.wheelsinmotion.jose.wimo.util.DBHelper;
 
 /**
  * Created by jose on 12/3/14.
  */
-public class FragmentBadges extends Fragment {
-    DBHelper db;
+public class FragmentBadges extends ListFragment {
+    String[] pepe;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        View rootView = inflater.inflate(R.layout.fragment_badges, container, false);
-
-        db = new DBHelper(rootView.getContext());
-
-        Badge badge = new Badge(1, "Badge Bronce Tree", 10, R.drawable.badge_tree_bronce);
-
-        db.createBadge(badge);
-        db.getBadges(11);
-        db.closeDB();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        View rootView = inflater.inflate(R.layout.fragment_badges_list, container, false);
+        //list_items = getResources().getStringArray(R.array.list);
+        String[] list_items = getResources().getStringArray(R.array.list);
+        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, list_items));
 
         return rootView;
     }
+
+    /*@Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {*/
+
+
+
+       /* View rootView = inflater.inflate(R.layout.fragment_badges_list, null);
+        getCurrentBadges();
+        BadgesListAdapter adapter = new BadgesListAdapter(this.getActivity(), pepe, getCurrentBadges());
+        ListView badgeslist = (ListView) rootView.findViewById(R.id.badges_list);
+        badgeslist.setAdapter(adapter);
+        badgeslist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                //TODO do some
+            }
+        });
+
+        return rootView;
+
+        return inflater.inflate(R.layout.fragment_badges_list, container, false);
+    }*/
+
+    private Badge[] getCurrentBadges(){
+        DBHelper dbHelper = new DBHelper(getActivity());
+        Object[] aux =dbHelper.getBadges(11).toArray();
+        Badge[] badges = new Badge[aux.length];
+        pepe = new String[aux.length];
+        int counter = 0;
+        for(Object o : aux){
+            badges[counter] = (Badge)o;
+            pepe[counter] = ((Badge) o).getName();
+            counter++;
+        }
+        return badges;
+    }
+
 }

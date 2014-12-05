@@ -28,20 +28,25 @@ public class DBHelper extends SQLiteOpenHelper {
 
     // Table Names
     private static final String TABLE_BADGE = "badges";
+    private static final String TABLE_MONTHLY_ACCUMULATED = "monthly_accumulated";
+    private static final String TABLE_DAY_ACCUMULATED = "day_accumulated";
 
     // Column names
-    private static final String ID = "badge_id";
-    private static final String NAME = "badge_name";
+    private static final String BADGE_ID = "badge_id";
+    private static final String BADGE_NAME = "badge_name";
 
-    private static final String VALUE = "badge_value";
-    private static final String DRAWABLE_VALUE = "badge_drawable_value";
+    private static final String BADGE_VALUE = "badge_value";
+    private static final String BADGE_DRAWABLE_VALUE = "badge_drawable_value";
+
+    private static final String MONTHLY_ACUUMULATED_ID = "monthly_accumulated_id";
+    private static final String MONTHLY_ACUUMULATED_VALUE = "monthly_accumulated_value";
 
     // Table Create Statements
-    // Todo table create statement
+    // Badge table create statement
     private static final String CREATE_TABLE_BADGE = "CREATE TABLE "
-            + TABLE_BADGE + "(" + ID + " INTEGER PRIMARY KEY," + NAME
-            + " NAME," + VALUE + " VALUE," + DRAWABLE_VALUE
-            + " DRAWABLE_VALUE" + ")";
+            + TABLE_BADGE + "(" + BADGE_ID + " INTEGER PRIMARY KEY," + BADGE_NAME
+            + " BADGE_NAME," + BADGE_VALUE + " BADGE_VALUE," + BADGE_DRAWABLE_VALUE
+            + " BADGE_DRAWABLE_VALUE" + ")";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -69,10 +74,10 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(ID, badge.getId());
-        values.put(NAME, badge.getName());
-        values.put(VALUE, badge.getValue());
-        values.put(DRAWABLE_VALUE, badge.getDrawableValue());
+        values.put(BADGE_ID, badge.getId());
+        values.put(BADGE_NAME, badge.getName());
+        values.put(BADGE_VALUE, badge.getValue());
+        values.put(BADGE_DRAWABLE_VALUE, badge.getDrawableValue());
 
         // insert row
         long badge_id = db.insert(TABLE_BADGE, null, values);
@@ -87,7 +92,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selectQuery = "SELECT  * FROM " + TABLE_BADGE + " WHERE "
-                + ID + " = " + badge_id;
+                + BADGE_ID + " = " + badge_id;
 
         Log.e(LOG, selectQuery);
 
@@ -96,10 +101,10 @@ public class DBHelper extends SQLiteOpenHelper {
         if (c != null)
             c.moveToFirst();
 
-        Badge badge = new Badge(c.getLong(c.getColumnIndex(ID)),
-                                c.getString(c.getColumnIndex(NAME)),
-                                c.getInt(c.getColumnIndex(VALUE)),
-                                c.getInt(c.getColumnIndex(DRAWABLE_VALUE)));
+        Badge badge = new Badge(c.getLong(c.getColumnIndex(BADGE_ID)),
+                                c.getString(c.getColumnIndex(BADGE_NAME)),
+                                c.getInt(c.getColumnIndex(BADGE_VALUE)),
+                                c.getInt(c.getColumnIndex(BADGE_DRAWABLE_VALUE)));
 
         return badge;
     }
@@ -111,7 +116,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         List<Badge> badges = new ArrayList<Badge>();
-        String selectQuery = "SELECT * FROM " + TABLE_BADGE + " WHERE " + VALUE +" < "+ value;
+        String selectQuery = "SELECT * FROM " + TABLE_BADGE + " WHERE " + BADGE_VALUE +" < "+ value;
 
         Log.e(LOG, selectQuery);
 
@@ -120,10 +125,10 @@ public class DBHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (c.moveToFirst()) {
             do {
-                Badge badge = new Badge(c.getLong(c.getColumnIndex(ID)),
-                        c.getString(c.getColumnIndex(NAME)),
-                        c.getInt(c.getColumnIndex(VALUE)),
-                        c.getInt(c.getColumnIndex(DRAWABLE_VALUE)));
+                Badge badge = new Badge(c.getLong(c.getColumnIndex(BADGE_ID)),
+                        c.getString(c.getColumnIndex(BADGE_NAME)),
+                        c.getInt(c.getColumnIndex(BADGE_VALUE)),
+                        c.getInt(c.getColumnIndex(BADGE_DRAWABLE_VALUE)));
 
                 // adding to badges list
                 badges.add(badge);

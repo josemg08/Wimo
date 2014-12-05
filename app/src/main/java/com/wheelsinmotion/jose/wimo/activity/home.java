@@ -30,19 +30,26 @@ public class home extends FragmentActivity implements
         // Initilization
         viewPager = (ViewPager) findViewById(R.id.pager);
         actionBar = getActionBar();
-        mAdapter = new TabPagerAdapter(getSupportFragmentManager());
+        //mAdapter = new TabPagerAdapter(getSupportFragmentManager());
+
+        mAdapter = new TabPagerAdapter(this, viewPager);
+        mAdapter.addTab(actionBar.newTab().setText("List Fragment 1"), FragmentHome.class, null);
+        mAdapter.addTab(actionBar.newTab().setText("List Fragment 2"), FragmentBadges.class, null);
+        mAdapter.addTab(actionBar.newTab().setText("List Fragment 3"), FragmentBeneficts.class, null);
 
         viewPager.setAdapter(mAdapter);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+
 
         actionBar.setHomeButtonEnabled(false);
         actionBar.setDisplayShowTitleEnabled(false);
 
         // Adding Tabs
-        for (String tab_name : tabs) {
+        /*for (String tab_name : tabs) {
             actionBar.addTab(actionBar.newTab().setText(tab_name)
                     .setTabListener(this));
-        }
+        }*/
 
         /**
          * on swiping the viewpager make respective tab selected

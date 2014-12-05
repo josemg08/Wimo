@@ -17,16 +17,18 @@ import com.wheelsinmotion.jose.wimo.R;
  * Created by jose on 12/3/14.
  */
 public class FragmentHome extends Fragment implements LocationListener {
-    Location lastLocation = null;
-    float actualDistanceMeters = 0, totalDistanceMeters = 0;
-    int actualDistanceKilometers = 0, totalDistanceKilometers = 0;
+    private Location lastLocation = null;
+    private float actualDistanceMeters = 0, totalDistanceMeters = 0;
+    private int actualDistanceKilometers = 0, totalDistanceKilometers = 0;
 
-    public static final String TOTAL_KILOMETERS = "TotalKilometers";
+    private static final String TOTAL_KILOMETERS = "TotalKilometers";
 
-    TextView kilometers_count;
-    TextView meters_count;
+    private TextView kilometers_count;
+    private TextView meters_count;
 
     private LocationManager locationManager;
+
+    private SharedPreferences settings;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,7 +36,7 @@ public class FragmentHome extends Fragment implements LocationListener {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        SharedPreferences settings = getActivity().getSharedPreferences(TOTAL_KILOMETERS, 0);
+        settings = getActivity().getSharedPreferences(TOTAL_KILOMETERS, 0);
         totalDistanceMeters = settings.getInt("total_meters", 0);
         totalDistanceKilometers = settings.getInt("total_km", 0);
 
@@ -84,6 +86,17 @@ public class FragmentHome extends Fragment implements LocationListener {
         }
 
         //kilometers.setText(totalDistanceMeters);
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+
+        settings = getActivity().getSharedPreferences(TOTAL_KILOMETERS, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("total", (int) totalDistanceMeters);
+        editor.putInt("total_km", totalDistanceKilometers);
+        editor.commit();
     }
 
     @Override
