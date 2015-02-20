@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light">
+    <!--<style name="AppTheme" parent="android:Theme.Material.Light">
+    </style>-->
+    <style name="Tab" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#ffffff</item>
+        <item name="android:textColor">#ff74ff4b</item>
+        <item name="android:backgroundStacked">#ffffff</item>
+        <item name="android:backgroundSplit">#ffffff</item>
+        <item name="android:actionBarTabTextStyle">@style/BarText</item>
+        <item name="android:navigationBarColor">#ff74ff4b</item>
+        <item name="android:statusBarColor">#ff74ff4b</item>
     </style>
 </resources>

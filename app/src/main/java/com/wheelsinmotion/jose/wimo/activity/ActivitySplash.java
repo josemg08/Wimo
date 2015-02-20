@@ -24,11 +24,11 @@ public class ActivitySplash extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        DBHelper db = new DBHelper(this);
+        DBHelper db = DBHelper.getHelper(this);
         SharedPreferences instances = getSharedPreferences(INSTANCES, MODE_WORLD_WRITEABLE);
 
         //this is to initialize instances in the data base for the first time
-        if(instances.getBoolean("badges_initialized", false)){
+        if(!instances.getBoolean("badges_initialized", false)){
             initBadges(db, instances);
         }
         db.closeDB();

@@ -24,8 +24,9 @@ public class FragmentBadges extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View rootView = inflater.inflate(R.layout.fragment_badges_list, container, false);
         //list_items = getResources().getStringArray(R.array.list);
+        getCurrentBadges();
         String[] list_items = getResources().getStringArray(R.array.list);
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, list_items));
+        setListAdapter(new BadgesListAdapter(getActivity(), pepe, getCurrentBadges()));
 
         return rootView;
     }
@@ -55,8 +56,9 @@ public class FragmentBadges extends ListFragment {
     }*/
 
     private Badge[] getCurrentBadges(){
-        DBHelper dbHelper = new DBHelper(getActivity());
-        Object[] aux =dbHelper.getBadges(11).toArray();
+        DBHelper dbHelper = DBHelper.getHelper(getActivity());
+        //.getReadableDatabase();
+        Object[] aux =dbHelper.getBadges(1111).toArray();
         Badge[] badges = new Badge[aux.length];
         pepe = new String[aux.length];
         int counter = 0;

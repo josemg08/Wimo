@@ -2,21 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" android:background="#ecfff2"
-    android:weightSum="7">
+    android:layout_height="fill_parent"
+    android:weightSum="100">
+
+    <!--  ________________ Metrics  ________________ -->
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
-        android:weightSum="3">
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:weightSum="100">
+
+        <!--  ________________ Kilo and meters  ________________ -->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_height="0dp"
+            android:layout_weight="80">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -30,11 +33,13 @@
                 android:id="@+id/meters" android:layout_gravity="bottom" android:textSize="60dp"
                 android:textColor="#080808" android:layout_marginTop="40dp"/>
         </LinearLayout>
+
+        <!--  ________________ Kilometers label ________________ -->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_height="0dp"
+            android:layout_weight="20">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,40 +49,66 @@
                 android:layout_marginLeft="140dp"
                 android:textColor="#080808"/>
         </LinearLayout>
+
     </LinearLayout>
 
-    <!--End of big number-->
+    <!--  ________________ Winnings  ________________ -->
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="2"
-        android:weightSum="2">
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:weightSum="100">
+
+        <!--  ________________ Wimo cash  ________________ -->
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_weight="50"
+            android:weightSum="100">
             <Button
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="0dp"
                 android:id="@+id/beneficts"
-                android:layout_weight="1" android:background="@drawable/beneficts"
+                android:layout_weight="50" android:background="@drawable/beneficts"
                 android:layout_marginLeft="60dp" android:layout_marginRight="30dp"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="0"
+                android:id="@+id/wimo_cash_label"
+                android:textSize="60dp"
+                android:layout_marginLeft="90dp"
+                android:textColor="#080808"
+                android:layout_weight="50"/>
         </LinearLayout>
+
+        <!-- ________________ Tree's __________________ -->
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_weight="50"
+            android:weightSum="100">
             <Button
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="0dp"
                 android:id="@+id/trees"
-                android:layout_weight="1" android:background="@drawable/tree" android:layout_marginLeft="30dp"
+                android:layout_weight="50" android:background="@drawable/tree" android:layout_marginLeft="30dp"
                 android:layout_marginRight="60dp"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="0"
+                android:id="@+id/trees_label"
+                android:textSize="60dp"
+                android:layout_marginLeft="70dp"
+                android:textColor="#080808"
+                android:layout_weight="50"/>
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

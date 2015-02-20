@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- STATES WHEN BUTTON IS NOT PRESSED -->
+
+    <!-- Non focused states -->
+    <item android:state_focused="false" android:state_selected="false"
+        android:state_pressed="false"
+        android:background="#ff00ff" />
+    <item android:state_focused="false" android:state_selected="true"
+        android:state_pressed="false"
+        android:background="#ffff00" />
+
+    <!-- Focused states (such as when focused with a d-pad or mouse hover) -->
+    <item android:state_focused="true" android:state_selected="false"
+        android:state_pressed="false"
+        android:background="#0000ff" />
+    <item android:state_focused="true" android:state_selected="true"
+        android:state_pressed="false"
+        android:background="#ff0000" />
+
+    <!-- STATES WHEN BUTTON IS PRESSED -->
+
+    <!-- Non focused states -->
+    <item android:state_focused="false" android:state_selected="false"
+        android:state_pressed="true"
+        android:background="#ffffff" />
+    <item android:state_focused="false" android:state_selected="true"
+        android:state_pressed="true"
+        android:background="#00ff00" />
+    <!-- Focused states (such as when focused with a d-pad or mouse hover) -->
+    <item android:state_focused="true" android:state_selected="false"
+        android:state_pressed="true"
+        android:background="#aaaa" />
+    <item android:state_focused="true" android:state_selected="true"
+        android:state_pressed="true"
+        android:background="#330333" />
+</selector>

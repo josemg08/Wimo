@@ -17,6 +17,16 @@ import java.util.List;
  */
 public class DBHelper extends SQLiteOpenHelper {
 
+    private static DBHelper instance;
+
+    public static synchronized DBHelper getHelper(Context context)
+    {
+        if (instance == null)
+            instance = new DBHelper(context);
+
+        return instance;
+    }
+
     // Logcat tag
     private static final String LOG = "DatabaseHelper";
 

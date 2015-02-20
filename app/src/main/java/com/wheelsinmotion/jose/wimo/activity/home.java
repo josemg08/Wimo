@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.widget.RelativeLayout;
 
 import com.wheelsinmotion.jose.wimo.R;
 import com.wheelsinmotion.jose.wimo.util.TabPagerAdapter;
@@ -25,17 +26,22 @@ public class home extends FragmentActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.viewpager_home);
 
         // Initilization
         viewPager = (ViewPager) findViewById(R.id.pager);
         actionBar = getActionBar();
         //mAdapter = new TabPagerAdapter(getSupportFragmentManager());
 
+        //Tab tab = actionBar.newTab();
+        //RelativeLayout tabLayout = (RelativeLayout) tab.getCustomView();
+        //tabLayout.setBackgroundResource(R.drawable.tab_indicator);
+
         mAdapter = new TabPagerAdapter(this, viewPager);
-        mAdapter.addTab(actionBar.newTab().setText("List Fragment 1"), FragmentHome.class, null);
-        mAdapter.addTab(actionBar.newTab().setText("List Fragment 2"), FragmentBadges.class, null);
-        mAdapter.addTab(actionBar.newTab().setText("List Fragment 3"), FragmentBeneficts.class, null);
+        //mAdapter.addTab(tab.setText("Home"), FragmentHome.class, null);
+        mAdapter.addTab(actionBar.newTab().setText("Home"), FragmentHome.class, null);
+        mAdapter.addTab(actionBar.newTab().setText("Badges"), FragmentBadges.class, null);
+        mAdapter.addTab(actionBar.newTab().setText("benefits"), FragmentBeneficts.class, null);
 
         viewPager.setAdapter(mAdapter);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
