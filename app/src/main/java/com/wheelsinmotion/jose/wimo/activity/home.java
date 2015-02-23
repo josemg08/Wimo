@@ -46,8 +46,6 @@ public class home extends FragmentActivity implements
         viewPager.setAdapter(mAdapter);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-
-
         actionBar.setHomeButtonEnabled(false);
         actionBar.setDisplayShowTitleEnabled(false);
 
@@ -77,6 +75,9 @@ public class home extends FragmentActivity implements
             public void onPageScrollStateChanged(int arg0) {
             }
         });
+
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
     }
 
     @Override
