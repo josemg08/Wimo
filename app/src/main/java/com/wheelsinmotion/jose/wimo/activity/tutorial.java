@@ -14,7 +14,7 @@ public class tutorial extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tutorial);
+        setContentView(R.layout.fragment_tutorial);
     }
 
 }

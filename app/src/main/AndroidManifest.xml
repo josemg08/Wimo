@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".activity.ActivitySplash"
+            android:name=".activity.ActivityTutorial"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar"
             android:screenOrientation="portrait">
@@ -23,7 +23,6 @@
         <activity android:name=".activity.Activitylogin"
             android:theme="@android:style/Theme.NoTitleBar"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.tutorial"/>
         <activity android:name=".activity.home"
             android:screenOrientation="portrait"/>
     </application>
