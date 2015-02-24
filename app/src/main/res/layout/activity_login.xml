@@ -1,78 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:weightSum="7" android:background="@drawable/splash">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Log in"
+        android:textColor="#ffff"
+        android:id="@+id/loginButton"
+        android:textStyle="bold"
+        android:translationZ="-10dp"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_alignEnd="@+id/linearLayout1"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_button"
+        />
 
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
-        <Button
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/facebook" android:background="@drawable/facebook"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
+        android:id="@+id/linearLayout1"
+        android:layout_width="320.5dp"
+        android:layout_height="162dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_shape"
+        android:elevation="10dp"
+        android:clickable="false">
+
         <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/name_text" android:background="@drawable/fondo_login"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#393A35"
+            android:textSize="14.4dp"
+            android:id="@+id/username"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="26dp"
+            android:singleLine="true"
+            android:editable="true"
+            android:autoText="false"
+            android:clickable="false"
+            android:hint="Username"
+            android:textColorHint="#393A35"
+            android:enabled="true" />
+
         <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/email_text" android:background="@drawable/fondo_login"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#393A35"
+            android:textSize="14.4dp"
+            android:id="@+id/password"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:singleLine="true"
+            android:password="true"
+            android:editable="true"
+            android:hint="Password"
+            android:enabled="true"
+            android:textColorHint="#393A35"
+            android:clickable="false" />
     </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
-        <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/password_text" android:background="@drawable/fondo_login"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" android:onClick="jumpToHome">
-        <Button
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/sing_in" android:background="@drawable/singin" android:onClick="jumpToHome"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
-    </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>
