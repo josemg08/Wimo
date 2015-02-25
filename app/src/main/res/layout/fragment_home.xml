@@ -58,7 +58,7 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="40"
+        android:layout_weight="30"
         android:weightSum="100">
 
         <!--  ________________ Wimo cash  ________________ -->
@@ -108,6 +108,23 @@
                 android:textColor="#080808"
                 android:layout_weight="50"/>
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Kilometros totales"
+            android:id="@+id/total_kilometers"
+            android:textSize="50dp"
+            android:textColor="#ffcf8d02"/>
 
     </LinearLayout>
 
