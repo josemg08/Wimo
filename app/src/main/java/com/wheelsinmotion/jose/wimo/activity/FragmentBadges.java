@@ -1,14 +1,10 @@
 package com.wheelsinmotion.jose.wimo.activity;
 
-import android.support.v4.app.ListFragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.wheelsinmotion.jose.wimo.R;
 import com.wheelsinmotion.jose.wimo.model.Badge;
@@ -35,8 +31,6 @@ public class FragmentBadges extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {*/
 
-
-
        /* View rootView = inflater.inflate(R.layout.fragment_badges_list, null);
         getCurrentBadges();
         BadgesListAdapter adapter = new BadgesListAdapter(this.getActivity(), pepe, getCurrentBadges());
@@ -51,7 +45,6 @@ public class FragmentBadges extends ListFragment {
         });
 
         return rootView;
-
         return inflater.inflate(R.layout.fragment_badges_list, container, false);
     }*/
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
     <!--<style name="AppTheme" parent="android:Theme.Material.Light">
     </style>
     <style name="Tab" parent="@android:style/Widget.Holo.Light.ActionBar">
@@ -11,4 +12,5 @@
         <item name="android:navigationBarColor">#ff74ff4b</item>
         <item name="android:statusBarColor">#ff74ff4b</item>
     </style>-->
+
 </resources>
