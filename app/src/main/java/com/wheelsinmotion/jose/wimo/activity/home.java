@@ -75,6 +75,7 @@ public class home extends FragmentActivity implements
             public void onPageScrollStateChanged(int arg0) {
             }
         });
+        
     }
 
     @Override
