@@ -2,40 +2,21 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
-        <!--<item name="android:actionBarStyle">@style/Tab</item>-->
-        <item name="android:background">#ecfff2</item>
-
+        <item name="android:background">#ffffff</item>
         <item name="android:actionBarStyle">@style/MyActionBar</item>
         <item name="android:actionBarTabTextStyle">@style/TabTextStyle</item>
-        <item name="android:actionMenuTextColor">#ff74ff4b</item>
-
-        <!-- Support library compatibility -->
-        <item name="actionBarStyle">@style/MyActionBar</item>
-        <item name="actionBarTabTextStyle">@style/TabTextStyle</item>
-        <item name="actionMenuTextColor">#ff74ff4b</item>
-    </style>
-
-    <style name="Tab" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">#ffffff</item>
-        <item name="android:textColor">#ff74ff4b</item>
-        <item name="android:backgroundStacked">#ffffff</item>
-        <item name="android:backgroundSplit">#ffffff</item>
-        <!--<item name="android:actionBarTabTextStyle">@style/BarText</item>-->
-       <!-- <item name="tab">#ff74ff4b</item>-->
     </style>
 
     <!-- general styles for the action bar -->
-    <style name="MyActionBar"
-        parent="@style/Widget.AppCompat.ActionBar">
-        <item name="android:background">#ffffff</item>
-        <item name="android:backgroundStacked">#ffffff</item>
-        <item name="android:backgroundSplit">#ffffff</item>
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">#ecfff2</item>
+        <item name="android:backgroundStacked">#ecfff2</item>
+        <item name="android:backgroundSplit">#ecfff2</item>
     </style>
 
     <!-- action bar tab text -->
-    <style name="TabTextStyle"
-        parent="@style/Widget.AppCompat.ActionBar.TabText">
-        <item name="android:textColor">#ff74ff4b</item>
+    <style name="TabTextStyle" parent="@style/Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">#ff076114</item>
     </style>
 
 </resources>
