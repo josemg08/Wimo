@@ -7,50 +7,45 @@
 
     <!--  ________________ Metrics  ________________ -->
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="60"
-        android:weightSum="100">
-
         <!--  ________________ Kilo and meters  ________________ -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="80">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00."
-                android:id="@+id/kilometers" android:layout_gravity="bottom" android:textSize="180dp"
-                android:textColor="#080808" android:layout_marginLeft="30dp"/>
+                android:text="100."
+                android:id="@+id/kilometers"
+                android:textSize="150dp"
+                android:textColor="#080808"
+                android:layout_marginLeft="30dp"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00"
-                android:id="@+id/meters" android:layout_gravity="bottom" android:textSize="60dp"
-                android:textColor="#080808" android:layout_marginTop="40dp"/>
-        </LinearLayout>
+                android:layout_toRightOf="@+id/kilometers"
+                android:layout_alignBottom="@+id/kilometers"
+                android:id="@+id/meters"
+                android:layout_gravity="bottom"
+                android:textSize="60dp"
+                android:gravity="bottom"
+                android:textColor="#080808"
+                android:layout_marginTop="40dp"/>
 
-        <!--  ________________ Kilometers label ________________ -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="20">
+            <!--  ________________ Kilometers label ________________ -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Km"
-                android:id="@+id/none"
+                android:id="@+id/kilometers_label"
                 android:textSize="60dp"
-                android:layout_marginLeft="140dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/kilometers"
                 android:textColor="#080808"/>
-        </LinearLayout>
-
-    </LinearLayout>
+        </RelativeLayout>
 
     <!--  ________________ Winnings  ________________ -->
 
